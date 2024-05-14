@@ -72,10 +72,10 @@ public class HavenoUtils {
     public static final int ARBITRATOR_ACK_TIMEOUT_SECONDS = 30;
 
     // configure fees
-    public static final boolean ARBITRATOR_ASSIGNS_TRADE_FEE_ADDRESS = true;
-    public static final double MAKER_FEE_PCT = 0.0015; // 0.15%
-    public static final double TAKER_FEE_PCT = 0.0075; // 0.75%
-    public static final double PENALTY_FEE_PCT = 0.02; // 2%
+    public static final boolean ARBITRATOR_ASSIGNS_TRADE_FEE_ADDRESS = false;
+    public static final double MAKER_FEE_PCT = 0; // 0%
+    public static final double TAKER_FEE_PCT = 0.015; // 1.5%
+    public static final double PENALTY_FEE_PCT = 0.03; // 3%
 
     // synchronize requests to the daemon
     private static boolean SYNC_DAEMON_REQUESTS = true; // sync long requests to daemon (e.g. refresh, update pool)
@@ -306,7 +306,7 @@ public class HavenoUtils {
 
     /**
      * Sign an offer.
-     * 
+     *
      * @param offer is an unsigned offer to sign
      * @param keyRing is the arbitrator's key ring to sign with
      * @return the arbitrator's signature
@@ -440,7 +440,8 @@ public class HavenoUtils {
         case XMR_STAGENET:
             return "5B11hTJdG2XDNwjdKGLRxwSLwDhkbGg7C7UEAZBxjE6FbCeRMjudrpNACmDNtWPiSnNfjDQf39QRjdtdgoL69txv81qc2Mc";
         case XMR_MAINNET:
-            throw new RuntimeException("Mainnet fee address not implemented");
+            // throw new RuntimeException("Mainnet fee address not implemented");
+            return "49tgj8hEtQT2MWytK5NxewamCZCzVi5mGJYPN8JSf2picDcnAJQ4RtKXw77hkVxqGgWoUPL6zdttYiYE46DvvXfJDatMrkk";
         default:
             throw new RuntimeException("Unhandled base currency network: " + Config.baseCurrencyNetwork());
         }
