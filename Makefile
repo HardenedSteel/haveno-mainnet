@@ -431,17 +431,17 @@ seednode:
 		--baseCurrencyNetwork=XMR_MAINNET \
 		--useLocalhostForP2P=false \
 		--useDevPrivilegeKeys=false \
-		--nodePort=1002 \
-		--appName=haveno-XMR_MAINNET_Seed_1002 \
-		--xmrNode=http://127.0.0.1:18081 \
+		--nodePort=1010 \
+		--appName=haveno-XMR_MAINNET_Seed_1010 \
+		--xmrNode=http://feder8.me:18081 \
 
 seednode2:
 	./haveno-seednode$(APP_EXT) \
 		--baseCurrencyNetwork=XMR_MAINNET \
 		--useLocalhostForP2P=false \
 		--useDevPrivilegeKeys=false \
-		--nodePort=1003 \
-		--appName=haveno-XMR_MAINNET_Seed_1003 \
+		--nodePort=1011 \
+		--appName=haveno-XMR_MAINNET_Seed_1011 \
 		--xmrNode=http://127.0.0.1:18081 \
 
 arbitrator-daemon-mainnet:
